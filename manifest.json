@@ -1,0 +1,40 @@
+{
+	"name": "Baybayin Transliterator",
+	"version": "0.0.3",
+	"author": "RyannKim327",
+	"permissions": [
+		"activeTab",
+		"clipboardWrite"
+	],
+	"background": {
+		"service_worker": "background.js"
+	},
+	"commands": {
+		"baybayin": {
+			"suggested_key": {
+				"default": "Ctrl+Shift+K",
+				"mac": "Command+Shift+K"
+			},
+			"description": "A baybayin transliterator extension for chrome and other browsers."
+		}
+	},
+	"action": {
+		"default_popup": "index.html",
+		"default_title": "Baybayin Transliterator Extension",
+		"default_icon": {
+		"16": "logo/16.png",
+		"32": "logo/32.png",
+		"48": "logo/48.png",
+		"64": "logo/64.png",
+		"128": "logo/128.png"
+		}
+	  },
+	  "icons": {
+		"16": "logo/16.png",
+		"32": "logo/32.png",
+		"48": "logo/48.png",
+		"64": "logo/64.png",
+		"128": "logo/128.png"
+	},
+	"manifest_version": 3
+}
