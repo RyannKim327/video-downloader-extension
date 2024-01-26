@@ -6,6 +6,11 @@
 	outline: none;
 }
 
+html{
+	min-width: 25em;
+	min-height: 10em;
+}
+
 main {
 	display: flex;
 	flex-direction: column;
