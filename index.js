@@ -37,7 +37,7 @@ function requestDownload(videoURL){
 			const data = response.medias
 			for(let d in data){
 				const a = document.createElement("a")
-				a.download = ""
+				a.download = ``
 				a.target = "_blank"
 				a.href = data[d].url
 				a.textContent = `Download ${data[d].extension} ${data[d].quality} (${data[d].formattedSize})`
