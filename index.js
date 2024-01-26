@@ -38,7 +38,6 @@ function requestDownload(videoURL){
 			for(let d in data){
 				const a = document.createElement("a")
 				a.download = ``
-				a.target = "_blank"
 				a.href = data[d].url
 				a.textContent = `Download ${data[d].extension} ${data[d].quality} (${data[d].formattedSize})`
 				window.URL.revokeObjectURL(data[d].url)
