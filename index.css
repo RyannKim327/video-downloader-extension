@@ -9,20 +9,50 @@
 main {
 	display: flex;
 	flex-direction: column;
+	align-items: center;
 }
 
-main > #links {
+main > div {
+	display: flex;
+	flex-direction: column;
+	width: 75%;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	margin: 1em;
+	box-shadow: 3px 3px 5px #333333;
+	align-items: center;
+	padding: .5em;
+	border-radius: .5em;
+}
+
+main > div > input {
+	border: 0;
+	background-color: transparent;
+	border-radius: .5em;
+	/* box-shadow: 3px 3px 5px #333333; */
+	border: 1px black solid;
+	font-family: 'Times New Roman', Times, serif;
+	padding: .15em .5em;
+	width: 90%;
+	margin: .5em;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}
+
+main > div > #links {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
 }
 
-main > h1, main h3{
+main > div > h3, main > div > h5{
 	text-align: center;
 }
 
-main > #links > a{
+main > div > #links > a{
 	width: 30%;
 	text-align: center;
 	color: black;
