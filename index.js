@@ -1,12 +1,17 @@
 const url = "https://projectcloudbased.vercel.app/convert"
 
 document.getElementById("url").onchange = () => {
-	console.log("Started")
-	requestDownload(document.getElementById("url").value)
+	const urlData = document.getElementById("url").value
+	if(urlData.includes("youtube.com") || urlData.includes("facebook.com")){
+		document.getElementById("title").textContent = `Please Wait...`
+		document.getElementById("source").textContent = ``
+		document.getElementById("duration").textContent = ``
+		document.getElementById("links").innerHTML = ""
+		requestDownload(urlData)
+	}
 }
 
 function requestDownload(videoURL){
-	console.log("Fetch")
 	fetch(url, {
 		method: "POST",
 		headers: {
