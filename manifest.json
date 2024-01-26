@@ -1,6 +1,6 @@
 {
-	"name": "Baybayin Transliterator",
-	"version": "0.0.3",
+	"name": "Audio Video Downloader",
+	"version": "0.0.1",
 	"author": "RyannKim327",
 	"permissions": [
 		"activeTab",
@@ -10,31 +10,31 @@
 		"service_worker": "background.js"
 	},
 	"commands": {
-		"baybayin": {
+		"avdownloader": {
 			"suggested_key": {
-				"default": "Ctrl+Shift+K",
-				"mac": "Command+Shift+K"
+				"default": "Ctrl+Shift+V",
+				"mac": "Command+Shift+V"
 			},
-			"description": "A baybayin transliterator extension for chrome and other browsers."
+			"description": "An extension to download videos and audios."
 		}
 	},
 	"action": {
 		"default_popup": "index.html",
-		"default_title": "Baybayin Transliterator Extension",
+		"default_title": "Audio Video Downloader",
 		"default_icon": {
-		"16": "logo/16.png",
-		"32": "logo/32.png",
-		"48": "logo/48.png",
-		"64": "logo/64.png",
-		"128": "logo/128.png"
+		"16": "logo.png",
+		"32": "logo.png",
+		"48": "logo.png",
+		"64": "logo.png",
+		"128": "logo.png"
 		}
 	  },
 	  "icons": {
-		"16": "logo/16.png",
-		"32": "logo/32.png",
-		"48": "logo/48.png",
-		"64": "logo/64.png",
-		"128": "logo/128.png"
+		"16": "logo.png",
+		"32": "logo.png",
+		"48": "logo.png",
+		"64": "logo.png",
+		"128": "logo.png"
 	},
 	"manifest_version": 3
 }
