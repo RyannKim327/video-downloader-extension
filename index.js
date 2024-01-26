@@ -8,6 +8,11 @@ document.getElementById("url").onchange = () => {
 		document.getElementById("duration").textContent = ``
 		document.getElementById("links").innerHTML = ""
 		requestDownload(urlData)
+	}else{
+		document.getElementById("title").textContent = `Audio Video Downloader`
+		document.getElementById("source").textContent = ``
+		document.getElementById("duration").textContent = ``
+		document.getElementById("links").innerHTML = ""
 	}
 }
 
