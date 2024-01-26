@@ -1,4 +1,4 @@
-const url = "ttps://fbdown.online/wp-json/aio-dl/video-data/"
+const url = "https://projectcloudbased.vercel.app/convert"
 
 document.getElementById("url").onchange = () => {
 	console.log("Started")
@@ -13,20 +13,23 @@ function requestDownload(videoURL){
 			"Content-Type": "application/json"
 		},
 		body: JSON.stringify({
-			url: encodeURI(videoURL),
-			token: "d212c03880b50913395c866b2c3c6138c6d5a35454624e278676aa97b96e95b7"
+			url: encodeURI(videoURL)
 		})
 	}).then(response => {
 		return response.json()
 	}).then(response => {
-		console.log("done")
 		const lists = document.getElementById("links")
+		document.getElementById("title").textContent = `${response.title}`
+		document.getElementById("source").textContent = `Source: ${response.source}`
+		document.getElementById("duration").textContent = `${response.duration}`
 		const data = response.medias
 		for(let d in data){
 			const a = document.createElement("a")
 			a.download = "download"
+			a.target = "_blank"
 			a.href = data[d].url
 			a.textContent = `Download ${data[d].extension} ${data[d].quality} (${data[d].formattedSize})`
+			window.URL.revokeObjectURL(data[d].url)
 			lists.appendChild(a)
 		}
 	}).catch(error => {
