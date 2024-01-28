@@ -12,6 +12,8 @@
 3. Andrian Bundas
 4. Sanz Dinopol
 5. FBDown (platform)
+6. John Paul Caigas
+7. Mark Kevin Manalo
 
 ---
 ### Usage
