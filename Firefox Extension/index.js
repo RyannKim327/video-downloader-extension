@@ -1,4 +1,4 @@
-const url = "https://projectcloudbased.vercel.app/convert"
+const url = "https://avd.vercel.app/convert"
 
 let html = "<!DOCTYPE html>"
 html += '<html lang="en">'
