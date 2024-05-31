@@ -18,3 +18,4 @@
 ---
 ### Usage
 > Just import this extension on your browser either `Chrome`, `Brave`, `Microsoft Edge`, or `Kiwi Browser (Mobile)`. For firefox, my apologies to disapoint you due to difficulties of creating extension for it, a reason why I was forced to download another browser for this. You may execute the layout by just clicking `CTRL + Shift + V` for the pop-up for desktop.
+You also required to enable the clipboard permission for auto paste of the program.
