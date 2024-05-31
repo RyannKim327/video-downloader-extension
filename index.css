@@ -1,78 +1,79 @@
 * {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-	user-select: none;
-	outline: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+  outline: none;
 }
 
-html{
-	min-width: 25em;
-	min-height: 10em;
+html {
+  min-width: 30em;
+  min-height: 25em;
 }
 
 main {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 main > div {
-	display: flex;
-	flex-direction: column;
-	width: 75%;
-	box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	margin: 1em;
-	box-shadow: 3px 3px 5px #333333;
-	align-items: center;
-	padding: .5em;
-	border-radius: .5em;
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  margin: 1em;
+  box-shadow: 3px 3px 5px #333333;
+  align-items: center;
+  padding: 0.5em;
+  border-radius: 0.5em;
 }
 
 main > div > input {
-	border: 0;
-	background-color: transparent;
-	border-radius: .5em;
-	/* box-shadow: 3px 3px 5px #333333; */
-	border: 1px black solid;
-	font-family: 'Times New Roman', Times, serif;
-	padding: .15em .5em;
-	width: 90%;
-	margin: .5em;
-	box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
+  border: 0;
+  background-color: transparent;
+  border-radius: 0.5em;
+  /* box-shadow: 3px 3px 5px #333333; */
+  border: 1px black solid;
+  font-family: "Times New Roman", Times, serif;
+  padding: 0.15em 0.5em;
+  width: 90%;
+  margin: 0.5em;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
 }
 
 main > div > #links {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-main > div > h3, main > div > h5{
-	text-align: center;
+main > div > h3,
+main > div > h5 {
+  text-align: center;
 }
 
 main > div > #links {
-	max-height: 50vh;
-	overflow-y: scroll;
-	width: 100%;
-	margin: 1em;
-	padding: 0 .75em;
+  max-height: 50vh;
+  overflow-y: scroll;
+  width: 100%;
+  margin: 1em;
+  padding: 0 0.75em;
 }
 
-main > div > #links > a{
-	width: 100%;
-	text-align: center;
-	color: black;
-	text-decoration: none;
-	background-color: wheat;
-	border-radius: .5em;
-	box-shadow: 3px 3px 5px #333333;
-	margin: .25em;
-	padding: .1em 1em;
+main > div > #links > a {
+  width: 100%;
+  text-align: center;
+  color: black;
+  text-decoration: none;
+  background-color: wheat;
+  border-radius: 0.5em;
+  box-shadow: 3px 3px 5px #333333;
+  margin: 0.25em;
+  padding: 0.1em 1em;
 }

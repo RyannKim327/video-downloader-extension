@@ -1,6 +1,6 @@
 {
 	"name": "Audio Video Downloader",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"author": "RyannKim327",
 	"permissions": [
 		"activeTab",

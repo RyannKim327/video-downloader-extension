@@ -1,6 +1,17 @@
 const url = "https://avd.vercel.app/convert"
 let converting = true
 
+window.onfocus = async () => {
+	navigator.permissions.query({name: "clipboard-read"})
+	const url = await navigator.clipboard.readText().then(c => {
+	if(c.includes("youtube.com") || c.includes("facebook.com")){
+		document.getElementById("title").textContent = "Auto fetch data using clipboard onload"
+		requestDownload(c)
+		document.getElementById("url").value = c
+		}
+	})
+}
+
 document.getElementById("url").onchange = () => {
 	const urlData = document.getElementById("url").value
 	if(urlData.includes("youtube.com") || urlData.includes("facebook.com")){
