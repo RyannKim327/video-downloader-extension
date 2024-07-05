@@ -4,6 +4,8 @@ let converting = true
 const urls = [
 	"9gag.com",
 	"www.9gag.com",
+	"douyin.com",
+	"www.douyin.com",
 	"facebook.com",
 	"www.facebook.com",
 	"instagram.com",

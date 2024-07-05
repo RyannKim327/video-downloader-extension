@@ -1,6 +1,6 @@
 {
 	"name": "Audio Video Downloader",
-	"version": "0.0.2",
+	"version": "0.0.3",
 	"author": "RyannKim327",
 	"permissions": [
 		"activeTab",
@@ -22,11 +22,11 @@
 		"default_popup": "index.html",
 		"default_title": "Audio Video Downloader",
 		"default_icon": {
-		"16": "logo.png",
-		"32": "logo.png",
-		"48": "logo.png",
-		"64": "logo.png",
-		"128": "logo.png"
+			"16": "logo.png",
+			"32": "logo.png",
+			"48": "logo.png",
+			"64": "logo.png",
+			"128": "logo.png"
 		}
 	  },
 	  "icons": {
