@@ -81,11 +81,14 @@ function requestDownload(videoURL){
 			document.getElementById("duration").textContent = `${response.duration}`
 			const data = response.medias
 			for(let d in data){
+				let type = ""
+				if(data[d].audioAvailable) type += "music"
+				if(data[d].videoAvailable) type += (type == "") ? " video no audio" : " and video"
 				const a = document.createElement("a")
 				a.download = ``
 				a.href = data[d].url
 				a.download = ""
-				a.innerHTML = `Download ${data[d].extension}<br>(<b>${data[d].quality}</b> - ${data[d].formattedSize})`
+				a.innerHTML = `Download (${type}) ${data[d].extension}<br>(<b>${data[d].quality}</b> - ${data[d].formattedSize})`
 				window.URL.revokeObjectURL(data[d].url)
 				lists.appendChild(a)
 			}
