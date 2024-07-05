@@ -1,13 +1,40 @@
 const url = "https://avd.vercel.app/convert"
 let converting = true
 
+const urls = [
+	"9gag.com",
+	"www.9gag.com",
+	"facebook.com",
+	"www.facebook.com",
+	"instagram.com",
+	"www.instagram.com",
+	"linkedin.com",
+	"www.linkedin.com",
+	"reddit.com",
+	"www.reddit.com",
+	"tiktok.com",
+	"www.tiktok.com",
+	"tumblr.com",
+	"www.tumblr.com",
+	"youtube.com",
+	"www.youtube.com",
+	"youtu.be",
+	"www.youtu.be",
+]
+
 window.onfocus = async () => {
 	navigator.permissions.query({name: "clipboard-read"})
-	const url = await navigator.clipboard.readText().then(c => {
-	if(c.includes("youtube.com") || c.includes("facebook.com")){
-		document.getElementById("title").textContent = "Auto fetch data using clipboard onload"
-		requestDownload(c)
-		document.getElementById("url").value = c
+	await navigator.clipboard.readText().then(c => {
+		let data = "this is just a dummy text"
+		const url = /https:\/\/(.*?)\/([\w\W]+)/
+		if(url.test(c)){
+			data = urlData.match(url)[1]
+		}
+
+		if(urls.includes(data)){
+			document.getElementById("title").textContent = "Auto fetch data using clipboard onload"
+			requestDownload(c)
+			document.getElementById("url").value = c
 		}
 	})
 }
@@ -21,27 +48,6 @@ document.getElementById("url").onchange = () => {
 		data = urlData.match(url)[1]
 	}
 
-	const urls = [
-		"9gag.com",
-		"www.9gag.com",
-		"facebook.com",
-		"www.facebook.com",
-		"instagram.com",
-		"www.instagram.com",
-		"linkedin.com",
-		"www.linkedin.com",
-		"reddit.com",
-		"www.reddit.com",
-		"tiktok.com",
-		"www.tiktok.com",
-		"tumblr.com",
-		"www.tumblr.com",
-		"youtube.com",
-		"www.youtube.com",
-		"youtu.be",
-		"www.youtu.be",
-	]
-	
 	if(urls.includes(data)){
 		document.getElementById("title").textContent = `Please Wait...`
 		document.getElementById("source").textContent = ``
