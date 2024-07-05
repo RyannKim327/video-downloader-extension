@@ -1,9 +1,9 @@
 ### Audio Video Downloader
-#### MPOP Reverse II
+#### MPOP Reverse II (Ryann Kim Sesgundo)
 
 ---
 ### Introduction
-> This project is created for just making some random project, which looks like useful. The extension was just a follow-up idea, after re-creating an api to access, both `facebook` and `youtube` videos.
+> This project is created for just making some random project, which looks like useful. The extension was just a follow-up idea, after re-creating an api to access, both `facebook` and `youtube` videos. And now, I've added more such as `9gag`, `reddit`, `tumblr`, `instagram`, `linkedin` and `tiktok`.
 
 ---
 ### People Behind this project
