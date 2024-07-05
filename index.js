@@ -85,8 +85,9 @@ function requestDownload(videoURL){
 			for(let d in data){
 				const a = document.createElement("a")
 				a.download = ``
-				a.href = data[d].url
-				a.textContent = `Download ${data[d].extension} ${data[d].quality} (${data[d].formattedSize})`
+				a.href = data[d].urL
+
+				a.innerHTML = `Download ${data[d].extension}<br>(<b>${data[d].quality}</b> - ${data[d].formattedSize})`
 				window.URL.revokeObjectURL(data[d].url)
 				lists.appendChild(a)
 			}
