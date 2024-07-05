@@ -21,14 +21,23 @@ document.getElementById("url").onchange = () => {
 	}
 	const urls = [
 		"9gag.com",
+		"www.9gag.com",
 		"facebook.com",
+		"www.facebook.com",
 		"instagram.com",
+		"www.instagram.com",
 		"linkedin.com",
+		"www.linkedin.com",
 		"reddit.com",
+		"www.reddit.com",
 		"tiktok.com",
+		"www.tiktok.com",
 		"tumblr.com",
+		"www.tumblr.com",
 		"youtube.com",
+		"www.youtube.com",
 		"youtu.be",
+		"www.youtu.be",
 	]
 	
 	if(urls.includes(data)){
