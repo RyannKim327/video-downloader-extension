@@ -14,7 +14,24 @@ window.onfocus = async () => {
 
 document.getElementById("url").onchange = () => {
 	const urlData = document.getElementById("url").value
-	if(urlData.includes("youtube.com") || urlData.includes("facebook.com")){
+	const url = /https:\/\/(.*?)\/([\w\W]+)/
+	let data = "this is just a dummy text"
+	if(url.test(urlData)){
+		data = urlData.match(url)[1]
+	}
+	const urls = [
+		"9gag.com",
+		"facebook.com",
+		"instagram.com",
+		"linkedin.com",
+		"reddit.com",
+		"tiktok.com",
+		"tumblr.com",
+		"youtube.com",
+		"youtu.be",
+	]
+	
+	if(urls.includes(data)){
 		document.getElementById("title").textContent = `Please Wait...`
 		document.getElementById("source").textContent = ``
 		document.getElementById("duration").textContent = ``
