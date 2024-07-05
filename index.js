@@ -16,9 +16,11 @@ document.getElementById("url").onchange = () => {
 	const urlData = document.getElementById("url").value
 	const url = /https:\/\/(.*?)\/([\w\W]+)/
 	let data = "this is just a dummy text"
+	
 	if(url.test(urlData)){
 		data = urlData.match(url)[1]
 	}
+
 	const urls = [
 		"9gag.com",
 		"www.9gag.com",
