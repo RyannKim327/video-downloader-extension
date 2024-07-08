@@ -8,6 +8,8 @@ const urls = [
 	"www.douyin.com",
 	"facebook.com",
 	"www.facebook.com",
+	"www.fb.watch",
+	"fb.watch",
 	"instagram.com",
 	"www.instagram.com",
 	"linkedin.com",
@@ -24,13 +26,20 @@ const urls = [
 	"www.youtu.be",
 ]
 
+window.onload = async () => {
+	init()
+}
 window.onfocus = async () => {
+	init()
+}
+
+async function init(){
 	navigator.permissions.query({name: "clipboard-read"})
 	await navigator.clipboard.readText().then(c => {
 		let data = "this is just a dummy text"
 		const url = /https:\/\/(.*?)\/([\w\W]+)/
 		if(url.test(c)){
-			data = urlData.match(url)[1]
+			data = c.match(url)[1]
 		}
 
 		if(urls.includes(data)){
@@ -87,9 +96,8 @@ function requestDownload(videoURL){
 				if(data[d].audioAvailable) type += "music"
 				if(data[d].videoAvailable) type += (type == "") ? " video no audio" : " and video"
 				const a = document.createElement("a")
-				a.download = ``
 				a.href = data[d].url
-				a.download = ""
+				a.download = `${response.title}.${data[d].extension}`
 				a.innerHTML = `Download (${type}) ${data[d].extension}<br>(<b>${data[d].quality}</b> - ${data[d].formattedSize})`
 				window.URL.revokeObjectURL(data[d].url)
 				lists.appendChild(a)
